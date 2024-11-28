@@ -1,0 +1,112 @@
+/* Estilos gerais do header */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  z-index: 10;
+  position: relative; /* Para não interferir com a sidebar */
+}
+
+.logo {
+  font-size: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Barra lateral fixa à esquerda, mas não sobrepondo o conteúdo */
+.sidebar {
+  /* position: fixed;  A barra lateral ficará fixa à esquerda */
+  position: absolute;
+  top: 160px;         /* Começa logo abaixo do cabeçalho */
+  left: 19px;
+  width: 290px;      /* Largura da barra lateral */
+  height: 90vh;     /* A barra lateral ocupa toda a altura da tela */
+  background: rgba(0, 0, 0, 0.7);  /* Fundo semi-transparente */
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;  /* Garante que a sidebar fique acima do conteúdo */
+  padding: 20px;
+}
+
+/* Título "Principais Notícias" centralizado */
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Carrossel de Notícias */
+.carousel {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  animation: slideIn 5s infinite;
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-100%); }
+  50% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+
+/* Corpo do conteúdo principal, ajustado para dar espaço para a sidebar */
+body {
+  margin-left: 240px;  /* Espaço para a sidebar */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1, p {
+  margin-left: 20px;
+}
+/* Barra lateral direita (anúncio) */
+.sidebar-right {
+  position: absolute;
+  top: 170px;
+  right: 0;
+  height: 280px;
+  width: 250px;
+  padding: 10px;
+  background-color: #ffcc00;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.sidebar-right2{
+  position: absolute;
+  top: 530px;
+  right: 0;
+  height: 280px;
+  width: 250px;
+  padding: 10px;
+  background-color: #ff9800;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.sidebar-right3{
+  position: absolute;
+  top: 870px;
+  right: 0;
+  height: 280px;
+  width: 250px;
+  padding: 10px;
+  background-color: #11db9f;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
